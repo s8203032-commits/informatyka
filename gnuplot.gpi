@@ -1,0 +1,17 @@
+set term pdf 
+set output 'plot.pdf'
+set parametric
+set urange [0:1]
+set vrange [0:2*pi]
+
+set isosamples 40,100
+set hidden3d
+set pm3d
+
+a = 2.0 
+b = 1.0 
+c = 0.3 
+
+splot a*u*cos(v), \
+      b*u*sin(v), \
+      c*((a*u*cos(v))**2-(b*u*sin(v))**2)
