@@ -1,0 +1,10 @@
+name: chmura
+on: push
+jobs:
+  main:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v7
+      - run: sudo apt-get update
+      - run: sudo apt install texlive-latex-base
+      - run: pdflatex notes.tex
