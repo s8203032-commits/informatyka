@@ -10,4 +10,4 @@ jobs:
       - run: pdflatex notes.tex
       - uses: actions/upload-artifact
         with:
-          path: notes.pdf
+           path: notes.pdf
